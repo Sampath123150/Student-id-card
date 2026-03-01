@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd ~/Student-id-card
+            cd Student-id-card
             git pull origin main
-            docker compose down
-            docker compose up -d --build
+            docker-compose down
+            docker-compose up -d --build
