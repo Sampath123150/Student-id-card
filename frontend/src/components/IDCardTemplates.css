@@ -1,0 +1,267 @@
+/* Component Wrapper */
+.id-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Base Card Style */
+.id-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: 'Outfit', sans-serif;
+    color: #1E293B;
+    transition: transform 0.3s ease;
+}
+
+/* Template: Standard (Horizontal, typically for Schools) */
+.template-standard {
+    width: 450px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.template-standard .card-header {
+    background: linear-gradient(135deg, #4F46E5 0%, #3B82F6 100%);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.template-standard .card-body {
+    display: flex;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    flex: 1;
+    align-items: center;
+}
+
+.template-standard .photo-container {
+    width: 100px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 3px solid #E2E8F0;
+    flex-shrink: 0;
+}
+
+.template-standard .student-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.template-standard .student-details {
+    flex: 1;
+}
+
+.template-standard .card-footer {
+    background: #F8FAFC;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #E2E8F0;
+    font-size: 0.8rem;
+}
+
+/* Template: Vertical (Portrait, typically for Colleges) */
+.template-vertical {
+    width: 300px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.template-vertical .card-header {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.template-vertical .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    margin-top: -2.5rem;
+}
+
+.template-vertical .photo-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    z-index: 2;
+    background: white;
+}
+
+.template-vertical .student-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.template-vertical .info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.template-vertical .card-footer {
+    background: #F8FAFC;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #E2E8F0;
+}
+
+/* Template: Smart Card (Futuristic, Universities) */
+.template-smart {
+    width: 450px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    background: #0F172A;
+    color: white;
+    border: 1px solid #334155;
+    background-image: radial-gradient(circle at top right, rgba(129, 140, 248, 0.2) 0%, transparent 50%);
+}
+
+.template-smart .card-header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.template-smart .institution-name {
+    background: linear-gradient(135deg, #818CF8 0%, #34D399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.template-smart .card-body {
+    display: flex;
+    padding: 1.5rem;
+    gap: 2rem;
+    flex: 1;
+}
+
+.template-smart .photo-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #818CF8;
+}
+
+.template-smart .student-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.template-smart .info-label {
+    color: #94A3B8;
+}
+
+.template-smart .info-value {
+    color: white;
+}
+
+.template-smart .card-footer {
+    display: none;
+    /* Minimalist design */
+}
+
+/* Shared typography and elements */
+.institution-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.tagline {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    margin-top: 0.25rem;
+}
+
+.student-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.2;
+}
+
+.student-dept {
+    font-size: 0.9rem;
+    color: #64748B;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+}
+
+.template-smart .student-dept {
+    color: #94A3B8;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 0.7rem;
+    color: #64748B;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.1rem;
+}
+
+.info-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Fake Barcode */
+.barcode-bars {
+    height: 20px;
+    width: 150px;
+    background-image: linear-gradient(to right,
+            #1E293B 0%, #1E293B 10%,
+            transparent 10%, transparent 15%,
+            #1E293B 15%, #1E293B 30%,
+            transparent 30%, transparent 35%,
+            #1E293B 35%, #1E293B 40%,
+            transparent 40%, transparent 45%,
+            #1E293B 45%, #1E293B 60%,
+            transparent 60%, transparent 65%,
+            #1E293B 65%, #1E293B 80%,
+            transparent 80%, transparent 85%,
+            #1E293B 85%, #1E293B 100%);
+    opacity: 0.6;
+}
