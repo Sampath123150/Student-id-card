@@ -20,7 +20,7 @@ const StudentsList = () => {
 
     const fetchStudents = async () => {
         try {
-            const res = await axios.get('http://localhost:3000/api/students');
+            const res = await axios.get('/api/students');
             setStudents(res.data);
 
             // Initialize layout templates based on institution
@@ -53,7 +53,7 @@ const StudentsList = () => {
     const handleDelete = async (id, name) => {
         if (window.confirm(`Are you sure you want to delete ${name}? This will securely backup the photo to /backups and then delete the record.`)) {
             try {
-                await axios.delete(`http://localhost:3000/api/students/${id}`);
+                await axios.delete(`/api/students/${id}`);
                 setStudents(prev => prev.filter(s => s.id !== id));
             } catch (err) {
                 alert('Failed to delete student.');

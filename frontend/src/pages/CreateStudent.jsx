@@ -87,7 +87,7 @@ const CreateStudent = () => {
         submitData.append('photo', photo);
 
         try {
-            await axios.post('http://localhost:3000/api/students', submitData, {
+            await axios.post('/api/students', submitData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
 

@@ -10,7 +10,7 @@ const IDCardTemplates = forwardRef(({ student, templateType }, ref) => {
     const layoutClass = `id-card template-${templateType.toLowerCase()}`;
 
     // Base URLs
-    const imageUrl = photo_url.startsWith('blob:') ? photo_url : `http://localhost:3000${photo_url}`;
+    const imageUrl = photo_url.startsWith('blob:') ? photo_url : `${photo_url}`;
 
     return (
         <div className="id-card-wrapper" ref={ref}>
